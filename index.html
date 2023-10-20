@@ -6,38 +6,62 @@
     <title>Document</title>
 </head>
 <style>
-   canvas {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%; /* Thêm thuộc tính này để căn theo độ rộng */
+  canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 p {
-margin: 0;
-position: absolute;
-font: 16px Verdana;
-color: #eee;
-height: 25px;
-bottom: 5px; /* Thay đổi thuộc tính top thành bottom để căn cố định dưới cùng */
-text-shadow: 0 0 2px white;
+  margin: 0;
+  position: absolute;
+  font: 16px Verdana;
+  color: #eee;
+  height: 25px;
+  bottom: 5px;
+  text-shadow: 0 0 2px white;
 }
 
 p a {
-text-decoration: none;
-color: #aaa;
+  text-decoration: none;
+  color: #aaa;
 }
 
 span {
-font-size: 11px;
+  font-size: 11px;
 }
 
 p > a:first-of-type {
-font-size: 20px;
+  font-size: 20px;
 }
 
 body {
-overflow: auto;
+  overflow: auto;
+}
+
+/* Hiệu ứng @media cho điện thoại di động */
+@media (max-width: 767px) {
+  p {
+    font-size: 14px;
+    bottom: 10px;
+  }
+
+  p > a:first-of-type {
+    font-size: 18px;
+  }
+}
+
+/* Hiệu ứng @media cho máy tính xách tay */
+@media (min-width: 768px) and (max-width: 1023px) {
+  p {
+    font-size: 16px;
+    bottom: 7px;
+  }
+
+  p > a:first-of-type {
+    font-size: 19px;
+  }
 }
 </style>
 <body>
@@ -52,9 +76,9 @@ overflow: auto;
     
     opts = {
       strings: [ 'HAPPY BIRTHDAY!','CHÚC CHỊ CÓ MỘT SINH NHẬT VUI VẺ','VÀ THÀNH CÔNG TRONG CUỘC SỐNG' ],
-      charSize: 20,
-      charSpacing: 20,
-      lineHeight: 30,
+      charSize: 30,
+      charSpacing: 35,
+      lineHeight: 40,
       
       cx: w / 2,
       cy: h / 2,
